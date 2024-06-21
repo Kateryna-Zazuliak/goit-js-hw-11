@@ -4,6 +4,8 @@ import {markupResearch, showLoader, hideLoader, refs } from './js/render-functio
 import imageUrl from '../src/img/error.png';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 
@@ -34,6 +36,15 @@ refs.formElem.addEventListener('submit', event => {
             } else {
                 refs.galleryElem.innerHTML = '';
                 markupResearch(arr.hits);
+                let newGallery = new SimpleLightbox('.gallery-link', {
+        captionsData: 'alt',
+        captionPosition: 'bottom',
+        captionDelay: 250,
+    }).refresh();
+
+    newGallery.on('error.simplelightbox', function (e) {
+        console.log(e);
+    });
             }
         }).catch(err => console.log(err)).finally(() => {
             hideLoader();
