@@ -3,7 +3,7 @@ export const refs = {
     inputElem: document.querySelector('.input-search'),
     btnElem: document.querySelector('.btn-search'),
     galleryElem: document.querySelector('.gallery-list'),
-    loader: document.querySelector('.visually-hidden'),
+    loader: document.querySelector('.loader'),
 };
 export function showLoader() {
     refs.loader.classList.remove('visually-hidden');
