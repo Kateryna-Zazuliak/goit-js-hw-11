@@ -19,10 +19,10 @@ export function markupResearch(gallery) {
         markup += `<li class="gallery-item">
 <a class="gallery-link" href="${largeImageURL}"><img class="gallery-img" src="${webformatURL}" alt="${tags}"/></a>
 <div class="img-info">
-<div class="img-info-item"><p><strong>Likes</strong>${likes}</p></div>
-<div class="img-info-item"><p><strong>Views</strong>${views}</p></div>
-<div class="img-info-item"><p><strong>Comments</strong>${comments}</p></div>
-<div class="img-info-item"><p><strong>Downloads</strong>${downloads}</p></div></div></li>`
+<div class="img-info-item"><p class="img-info-value"><strong>Likes</strong></p><p>${likes}</p></div>
+<div class="img-info-item"><p class="img-info-value"><strong>Views</strong></p><p>${views}</p></div>
+<div class="img-info-item"><p class="img-info-value"><strong>Comments</strong></p><p>${comments}</p></div>
+<div class="img-info-item"><p class="img-info-value"><strong>Downloads</strong></p><p>${downloads}</p></div></div></li>`
     });
     refs.galleryElem.insertAdjacentHTML('afterbegin', markup);
 }
