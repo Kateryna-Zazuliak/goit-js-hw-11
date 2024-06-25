@@ -9,5 +9,10 @@ export function getResearch(gallery) {
         safesearch: true,
     });
     const url = `${BASE_URL}${END_POINT}?${params}`;
-    return fetch(url).then(res => res.json()).catch(err => console.log(err));
+    return fetch(url).then(res => res.json()).catch(err => {
+        console.log(err);
+        iziToast.error({
+            message: 'Error',
+        });
+    });
 }
