@@ -33,6 +33,7 @@ refs.formElem.addEventListener('submit', event => {
                     backgroundColor: '#ef4040',
                     message: 'Sorry, there are no images matching your search query. Please try again!',
                 });
+                refs.galleryElem.innerHTML = '';
             } else {
                 refs.galleryElem.innerHTML = '';
                 markupResearch(arr.hits);
